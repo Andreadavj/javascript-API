@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Monedas Nacional</title>
+    <title>Conversor de Monedas</title>
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css"> 
-    <script src="https://kit.fontawesome.com/ac18673302.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/jpg" href="./assets/img/icons8-moneda-96.png"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Conversor de Monedas</h1>
+        <!-- Input para ingresar pesos chilenos -->
+        <input id="monto" type="number" placeholder="Ingresa pesos chilenos" />
+    
+        <!-- Select para elegir la moneda -->
+        <select id="moneda">
+            <option value="dolar">USD - Dólar Americano</option>
+            <option value="euro">EUR - Euro</option>
+        </select>
+    
+        <!-- Botón para convertir -->
+        <button onclick="convertir()">Convertir</button>
+    
+        <!-- Div para mostrar el resultado -->
+        <div class="resultado" id="resultado"></div>
+    
+        <!-- Div para mostrar errores -->
+        <div class="error" id="error"></div>
+    
+        <!-- Canvas para mostrar el gráfico -->
+        <canvas id="miGrafico" width="400" height="400"></canvas>
+    </div>
     
     <script src="./assets/js/main.js"></script>
 </body>
